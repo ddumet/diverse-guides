@@ -7,6 +7,7 @@ This simple guide describes how to install R kernel on Jupyter notebook on Windo
 
 ## Download and install R
 Binary distributions of R packages (Linux, Mac OS X, and Windows) are available at the Comprehensive R Archive Network (**CRAN**). Download R for Windows from [here](https://cloud.r-project.org/index.html) and install.
+
 ![CRAN home page](installing-R-on-jupyter-1.png)
 
 **Remark**: *Important to install R and **not** R-Studio*
@@ -20,11 +21,14 @@ The R Kernel can be installed from the R Console:
     install.packages('IRkernel')
     ```
 * **Step-2**: By default, installation of R happens on C:\Program Files, in which one will not have rights to install R packages. I.e. the following warning displays:
+
     ![Library not writable](installing-R-on-jupyter-2.png)
     Select **Yes**
 * **Step-3**: Then select the default suggested library path for R packages, or specify one. Here, we accept the default, i.e. select **Yes**.
+
     ![Select default Library](installing-R-on-jupyter-3.png)
 * **Step-4**: R then starts installing the **IRkernel** packages and all its dependencies. The final installation output will look something similar to:
+
     ![Final installation output](installing-R-on-jupyter-4.png)
 * **Step-5**: We need to make the **IRkernel** available to Jupyter notebook. This is done by installing the Kernel spec system-wide with:
     ```shell
