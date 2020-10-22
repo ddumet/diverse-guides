@@ -17,16 +17,16 @@ This simple guide to get started with the **Windows Subsystem for Linux**.
 3. Select **Launch** or type the name of the distribution in **Start** menu.
 4. Choose a username. ***Can be anything, it has no bearing on the windows username***.
 5. Update distribution:
-```bash
-sudo apt update -y
-sudo apt upgrade -y
-```
+    ```bash
+    sudo apt update -y
+    sudo apt upgrade -y
+    ```
 
 ## Integration between Windows and Linux file systems
 * One can run linux command from windows command prompt or powershell prompt, using the ```wsl``` prefix. E.g.:
-```bash
-wsl ls
-```
+    ```bash
+    wsl ls
+    ```
 * Running ```wsl.exe``` or ```bash.exe``` switches to a linux command line environment, using the path of the current dir (mounted on ***/mnt/c***).
 
     **Attention!** In case there's more than one distibution installed, the environment will be the one of the ***default*** distribution. See below to know how to change distribution.
