@@ -23,23 +23,46 @@ sudo apt upgrade -y
 ```
 
 ## Integration between Windows and Linux file systems
-* One can run linux command from windows command prompt, using the ```wsl``` prefix. E.g.:
+* One can run linux command from windows command prompt or powershell prompt, using the ```wsl``` prefix. E.g.:
 ```bash
 wsl ls
 ```
 * Running ```wsl.exe``` or ```bash.exe``` switches to a linux command line environment, using the path of the current dir (mounted on ***/mnt/c***).
 
+    **Attention!** In case there's more than one distibution installed, the environment will be the one of the ***default*** distribution. See below to know how to change distribution.
+
     Type ```exit``` to exit this environment.
 * One can also run windows command from linux shell. E.g.:
-```bash
-ipcongig.exe
-```
+    ```bash
+    ipcongig.exe
+    ```
 
 ## Configure Visual Studio Code to work with WSL
-1. Install **Remote - WSL** extension
+1. Install **Remote - WSL** VSC extension
 
 ## Use multiple distributions
+*ALl commands below are powershell commands.*
 * Several different distribution can be installed.
 * ```wslconfig /list``` (or ```wsl --list```) lists all installed distribution
 * ```wsl --list --verbose``` lists installed distribution and their WSL version (1 or 2).
+* To change the default distribution (i.e. set the distribution used by default!):
+    ```bash
+    wsl --set-default <distribution-name>
+    ```
+    For instance:
+    ```bash
+    wsl --set-default Ubuntu-18.04
+    ```
+* To change the WSL version (1 or 2) used by the distribution:
+    ```bash
+    wsl --set-version <distribution-name> <version>
+    ```
+    For instance:
+    ```bash
+    wsl --set-version Ubuntu-18.04 2
+    ```
+* To remove a distribution:
+    ```bash
+    wsl --unregister <distribution-name>
+    ```
 
