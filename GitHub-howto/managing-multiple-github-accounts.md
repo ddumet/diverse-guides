@@ -68,4 +68,4 @@ Finally when cloning/creating a repository locally, use:
 ```bash
 git remote add origin git@github.firstaccount-username:repository-path.git
 ```
-with ***repository-path.git*** being anything after ***https://github.com/*** !
+with ***repository-path.git*** being anything after ***[https://github.com/]()*** !
