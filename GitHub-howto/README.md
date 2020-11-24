@@ -1,3 +1,3 @@
-# GitHUb how to
+# GitHub how to
 A collection of how to guides for different github tasks.
-* Managing multiple github accounts
+* [Managing multiple github accounts](./managing-multiple-github-accounts.md)
