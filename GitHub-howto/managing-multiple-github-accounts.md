@@ -31,6 +31,16 @@ The public part of the SSH keys must be added to the github account. Let's go th
     ![ssh keys](ssh-keys-github.png)
 
 ***Repeat this procedure for the second github account***
+## Add identities to the SSH authentication agent
+Both identities must be known by the SSH authentication agent. Simply add the identities to the agent using the name of the file containing the key, e.g.:
+```bash
+ssh-add ~/.ssh/firstaccount-username-ssh
+```
+
+Identities known by the SSH authentication agent can be listed with:
+```bash
+ssh-add -l
+```
 
 ## Create a configuration file
 Finally we create a configuration file into the ~/.ssh directory:
